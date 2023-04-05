@@ -1,6 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+<ul>
+    @foreach ($warga as $data)
+    <li>
+        {{$data -> nama}}
+        {{$data -> umur}}
+        <br><br>
+    </li>
+    @endforeach
+</ul>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

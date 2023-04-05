@@ -44,15 +44,7 @@ Route::resource('contactus', ContactUsController::class)->only([
     'index'
 ]);
    
-
-Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/home', [App\Http\Controllers\newCon::class, 'index'])->name('home');
 // praktikum 2
 // Halaman Dashboard
 Route::get('/', function () {
@@ -69,6 +61,4 @@ Route::get('/profile/{nim}', fn($nim)=> view('profile', ['nim' => $nim]));
 //halaman Experience
 Route::get('/experience', fn()=> view('experience'));
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

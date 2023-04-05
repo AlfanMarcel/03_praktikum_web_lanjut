@@ -7,8 +7,14 @@
 @endsection
 
 @section('content')
-    <p>Hi, Selamat Datang</p>
-@endsection
+<ul>
+    @foreach ($warga as $data)
+    <li>
+        {{$data -> nama}}
+        {{$data -> umur}}
+        <br><br>
+    </li>
+    @endforeach
 
 @section('footer')
     <p class="text-center">
